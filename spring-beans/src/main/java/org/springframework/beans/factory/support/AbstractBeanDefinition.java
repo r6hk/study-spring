@@ -297,6 +297,7 @@ public abstract class AbstractBeanDefinition extends BeanMetadataAttributeAccess
 	 */
 	public void overrideFrom(BeanDefinition other) {
 		if (StringUtils.hasLength(other.getBeanClassName())) {
+			// 将 beanClass 设置为子 Bean 的 beanClass
 			setBeanClassName(other.getBeanClassName());
 		}
 		if (StringUtils.hasLength(other.getScope())) {
